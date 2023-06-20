@@ -28,7 +28,7 @@ const searchwheather= (e) => {
 }
   return (
     <div>
-      <input type='text' onChange={e => dispatch(SET_QUERY(e.target.value))} onKeyPress={searchwheather} className={`${style.searchbar}`} value={query} placeholder='Search...'  />
+      <input type='text' onChange={e => dispatch(SET_QUERY(e.target.value))} onKeyPress={searchwheather} className={`${style.searchbar}`} value={query} placeholder='Search...'/>
     </div>
   )
 }

@@ -28,32 +28,30 @@ function App() {
 
 useEffect(() => {
   
-  if (weather.cod === 200)
-{
-  switch (weather.weather[0].main) {
-    case "Sunny":
-      setBgUrl(wheatherimages.sunny);
-      break;
-    case "Clouds":
-      setBgUrl(wheatherimages.cloud);
-      break;
-    case "Clear":
-      setBgUrl(wheatherimages.clear);
-      break;
-    case "Rain":
-      setBgUrl(wheatherimages.rain);
-      break;
-    case "Dust":
-      setBgUrl(wheatherimages.dust);
-      break;
-    default:
-      setBgUrl(wheatherimages.default);
-      console.log("default");
-      break;
-  }
-}
-  
-}, [weather])
+  if (weather.cod === 200){
+
+    switch (weather.weather[0].main) {
+      case "Sunny":
+        setBgUrl(wheatherimages.sunny);
+        break;
+      case "Clouds":
+        setBgUrl(wheatherimages.cloud);
+        break;
+      case "Clear":
+        setBgUrl(wheatherimages.clear);
+        break;
+      case "Rain":
+        setBgUrl(wheatherimages.rain);
+        break;
+      case "Dust":
+        setBgUrl(wheatherimages.dust);
+        break;
+      default:
+        setBgUrl(wheatherimages.default);
+        console.log("default");
+        break;
+    }
+}}, [weather])
 
   return (
     <div className="App" style={{backgroundImage:`url(${bgUrl})`}}>
